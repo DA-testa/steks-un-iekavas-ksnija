@@ -19,11 +19,10 @@ def find_mismatch(text):
 
         if next in ")]}":
             # Process closing bracket, write your code here
-            if not opening_brackets_stack:
+            if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char, next):
                 return i
-            top = opening_brackets_stack.pop()
-            if not top.are_matching(char):
-                return i
+            opening_brackets_stack.pop()
+            
             
      if opening_brackets_stack:
         return opening_brackets_stack[0].position
