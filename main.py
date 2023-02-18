@@ -1,4 +1,4 @@
-# python3
+# python3 Ksenija Žuka, 221RDC024
 
 from collections import namedtuple
 
