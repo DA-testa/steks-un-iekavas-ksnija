@@ -19,13 +19,13 @@ def find_mismatch(text):
 
         if next in ")]}":
             # Process closing bracket, write your code here
-            if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char, next):
+            if not opening_brackets_stack or not are_matching(opening_brackets_stack[len(opening_brackets_stack)-1].char, next):
                 return i+1
             opening_brackets_stack.pop()
             
             
      if opening_brackets_stack:
-        return opening_brackets_stack[0].position
+        return opening_brackets_stack[-1].position
      else: 
          return "Success"
 
@@ -41,5 +41,5 @@ def main():
         pass
     else:
         print("Jūsu tekstam jābūt I vai F burtam")
-        
+
     main()
