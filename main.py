@@ -31,13 +31,13 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    if "I" in text:
-        teksts = input()
-    mismatch = find_mismatch(teksts)
+    content = input()
+    if "I" in content:
+        text = input()
+    mismatch = find_mismatch(text)
     print(mismatch)
 
-    elif "F" in text:
+    elif "F" in content:
         pass
     else:
         print("Jūsu tekstam jābūt I vai F burtam")
